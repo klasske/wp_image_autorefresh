@@ -30,10 +30,13 @@ function image_autorefresh_shortcode($atts){
 	<script>
 	    setInterval(function()
         {
-            d = new Date();
-            image = jQuery('img#image_autorefresh_<?php echo $randomString ?>');
-            image.attr("src", image.data("src") + "?" + d.getTime());
+            if(document.hasFocus()){
+               d = new Date();
+               image = jQuery('img#image_autorefresh_<?php echo $randomString ?>');
+               image.attr("src", image.data("src") + "?" + d.getTime());
+            }
         }, <?php echo $a['refresh_time']; ?>000);
+
 	</script>
 
 	<div class="<?php echo '' != $a['caption'] ? 'wp-caption ': ''; ?>align<?php echo $a['align']; ?>">
