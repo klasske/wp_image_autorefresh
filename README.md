@@ -26,8 +26,11 @@ Or specify a different alignment (`left`, `right`, `center` or `none`)
 
 The shortcode
 
-    [image-autorefresh src="http://weather.cs.uit.no/wcam0_snapshots/wcam0_latest_small.jpg"
-                       refresh_time=120 caption="A view from Tromsø university" align="center"]
+    [image-autorefresh
+        src="http://weather.cs.uit.no/wcam0_snapshots/wcam0_latest_small.jpg"
+        refresh_time=120
+        caption="A view from Tromsø university"
+        align="center"]
 
 will generate the following code inside your post:
 
@@ -43,7 +46,10 @@ will generate the following code inside your post:
     <div class="wp-caption aligncenter">
 	    <img src="http://weather.cs.uit.no/wcam0_snapshots/wcam0_latest_small.jpg"
 	         data-src="http://weather.cs.uit.no/wcam0_snapshots/wcam0_latest_small.jpg"
-	         class="image_autorefresh" id="image_autorefresh_timb8XZCWL" data-refresh="120" style="width: 640px;">
+	         class="image_autorefresh"
+	         id="image_autorefresh_timb8XZCWL"
+	         data-refresh="120"
+	         style="width: 640px;">
 	    <p class="wp-caption-text">A view from Troms&oslash; university</p>
 	</div>
 
