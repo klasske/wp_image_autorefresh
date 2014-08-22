@@ -1,6 +1,11 @@
 === Image autorefresh shortcode ===
 Contributors: kvu022
 Tags: shortcode, refresh, image, reload
+Requires at least: 2.6
+Tested up to: 3.9.2
+Stable tag: 1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Small WordPress shortcode plugin created specifically for reloading images for site.uit.no/spaceweather
 
@@ -14,11 +19,11 @@ More info at [the GitHub repository](https://github.com/klasske/wp_image_autoref
 
 == Frequently Asked Questions ==
 
-== Screenshots ==
+= Can I add multiple images in one post? =
+
+Yes, you can sue the shortcode multiple times and set different refresh intervals for each.
 
 == Changelog ==
 
 = 1 =
 * Initial release.
-
-== Upgrade Notice ==
