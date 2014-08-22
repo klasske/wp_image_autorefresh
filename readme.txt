@@ -3,7 +3,7 @@ Contributors: kvu022
 Tags: shortcode, refresh, autorefresh, image, reload, jquery, interval
 Requires at least: 2.6
 Tested up to: 3.9.2
-Stable tag: 1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,8 +76,8 @@ The shortcode allows for multiple images on one page with different refresh rate
 
 == Installation ==
 1. Unpack \"wp_image_autorefresh.zip\" to the \"/wp-content/plugins/\" directory.
-1. Activate the plugin through the \"Plugins\" menu in WordPress.
-1. Place shortcode  in your post.
+2. Activate the plugin through the \"Plugins\" menu in WordPress.
+3. Place shortcode  in your post.
 
 
 == Frequently Asked Questions ==
@@ -87,6 +87,9 @@ The shortcode allows for multiple images on one page with different refresh rate
 Yes, you can sue the shortcode multiple times and set different refresh intervals for each.
 
 == Changelog ==
+
+= 1.1 =
+* Images are only reloaded when they are in a window which currently has focus.
 
 = 1 =
 * Initial release.

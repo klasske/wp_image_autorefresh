@@ -50,7 +50,7 @@ will generate the following code inside your post:
 	         id="image_autorefresh_timb8XZCWL"
 	         data-refresh="120"
 	         style="width: 640px;">
-	    <p class="wp-caption-text">A view from Troms&oslash; university</p>
+	    <p class="wp-caption-text">A view from Tromsø university</p>
 	</div>
 
 Which will automatically refresh the live view from Troms&oslash; every 120 seconds
