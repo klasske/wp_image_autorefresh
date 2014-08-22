@@ -1,6 +1,6 @@
 === Image autorefresh shortcode ===
 Contributors: kvu022
-Tags: shortcode, refresh, image, reload
+Tags: shortcode, refresh, image, reload, jquery
 Requires at least: 2.6
 Tested up to: 3.9.2
 Stable tag: 1
