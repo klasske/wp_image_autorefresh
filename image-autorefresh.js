@@ -5,9 +5,10 @@
 jQuery(document).ready(function(){
 
 
-    //todo find a better way to determine width
-   jQuery('img.image_autorefresh').width(jQuery('#content').width());
+    /* set image width to the same as container */
+    jQuery('img.image_autorefresh').width(jQuery('#content').width());
 
+    /* when the window regains focus, reload all images */
     jQuery(document).focus(function(){
         jQuery('img.image_autorefresh').each(function(){
                d = new Date();
