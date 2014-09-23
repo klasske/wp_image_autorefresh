@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image autorefresh shortcode
 Plugin URI: https://github.com/klasske/wp_image_autorefresh
-Description: Small shortcode plugin created specifically for reloading images for site.uit.no/spaceweather
+Description: Ligthweight shortcode plugin created specifically for reloading images that are refreshed on a regular basis (for example from live camera feeds)
 Version: 1.3
 Author: Klaske van Vuurden
 Author URI: https://github.com/klasske/
