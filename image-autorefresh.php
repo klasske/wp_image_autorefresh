@@ -3,7 +3,7 @@
 Plugin Name: Image autorefresh shortcode
 Plugin URI: https://github.com/klasske/wp_image_autorefresh
 Description: Small shortcode plugin created specifically for reloading images for site.uit.no/spaceweather
-Version: 1.2
+Version: 1.3
 Author: Klaske van Vuurden
 Author URI: https://github.com/klasske/
 Copyright: Klaske van Vuurden
@@ -21,7 +21,8 @@ function image_autorefresh_shortcode($atts){
 			'align' => 'left',
 			'width' => 0,
 			'height' => 0,
-			'class' => ''	
+			'class' => '',
+			'query_string' => ''	
 	), $atts );
 
    /* second version: allows multiple images per page with random string */
@@ -36,14 +37,20 @@ function image_autorefresh_shortcode($atts){
             if(document.hasFocus()){
                d = new Date();
                image = jQuery('img#image_autorefresh_<?php echo $randomString ?>');
-               image.attr("src", image.data("src") + "?" + d.getTime());
+               if(image.data("query") == ''){
+	               image.attr("src", image.data("src") + "?" + d.getTime());
+               }else{
+	               image.attr("src", image.data("src") + "?" + d.getTime() + "&" + image.data("query"));
+               }    
             }
         }, <?php echo $a['refresh_time']; ?>000);
 
 	</script>
 
 	<div class="<?php echo '' != $a['caption'] ? 'wp-caption ': ''; ?>align<?php echo $a['align']; ?>">
-	<img src="<?php echo $a['src']; ?>" data-src="<?php echo $a['src']; ?>"
+	<img src="<?php echo $a['src']; echo ($a['query_string'] != '') ? '?' . $a['query_string'] : ''; ?>" 
+		 data-src="<?php echo $a['src']; ?>"
+	     data-query="<?php echo $a['query_string']; ?>"
 	     class="image_autorefresh<?php 
 	     echo ($a['width'] > 0) ? ' image_autorefresh_changed_width' : ''; 
 	     echo ($a['class'] != '') ? ' ' . $a['class'] : ''; 

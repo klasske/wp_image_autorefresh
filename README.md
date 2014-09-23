@@ -30,6 +30,10 @@ Add classes to the image
 
     [image-autorefresh src="image-url" class="your_custom_class"]
     
+Add a custom query string to the image    
+
+    [image-autorefresh src="image-url" query_string="usr=test_user&password=some_password"]
+    
 ## Examples
 
 The shortcode
@@ -70,6 +74,6 @@ The shortcode allows for multiple images on one page with different refresh rate
 
 ## Plans for new versions
 
-In version 1.3, I will add parameters to the shortcode to force reload even when the page doesn't have focus (not recommended). 
-A parameter to add classes to the div. A way to load images that already have query parameters in the address.
+In version 1.4, I will add parameters to the shortcode to force reload even when the page doesn't have focus (not recommended). 
+A parameter to add classes to the div.
 

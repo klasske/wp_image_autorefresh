@@ -15,7 +15,12 @@ jQuery(document).ready(function(){
     jQuery(document).focus(function(){
         jQuery('img.image_autorefresh').each(function(){
                d = new Date();
-               this.attr("src", this.data("src") + "?" + d.getTime());
+
+               if(this.data("query") == ''){
+            	   this.attr("src", this.data("src") + "?" + d.getTime());
+               }else{
+            	   this.attr("src", this.data("src") + "?" + d.getTime() + "&" + this.data("query"));
+               } 
         });
 
     });

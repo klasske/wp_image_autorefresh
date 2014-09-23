@@ -36,6 +36,19 @@ Or specify a different alignment (`left`, `right`, `center` or `none`)
 
     [image-autorefresh src="image-url" align="center"]
 
+    
+Add width and height in pixels   
+
+    [image-autorefresh src="image-url" width=320 height=240]
+    
+Add classes to the image
+
+    [image-autorefresh src="image-url" class="your_custom_class"]
+    
+Add a custom query string to the image    
+
+    [image-autorefresh src="image-url" query_string="usr=test_user&password=some_password"]
+
 ## Examples
 
 The shortcode
@@ -87,6 +100,12 @@ The shortcode allows for multiple images on one page with different refresh rate
 Yes, you can sue the shortcode multiple times and set different refresh intervals for each.
 
 == Changelog ==
+
+= 1.3 =
+* Added the parameter `query_string` to add any query parameters necessary to load the image
+
+= 1.2 =
+* Added height, width and class parameters.
 
 = 1.1 =
 * Images are only reloaded when they are in a window which currently has focus.
