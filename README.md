@@ -21,7 +21,15 @@ Add a caption
 Or specify a different alignment (`left`, `right`, `center` or `none`)
 
     [image-autorefresh src="image-url" align="center"]
+    
+Add width and height in pixels   
 
+    [image-autorefresh src="image-url" width=320 height=240]
+    
+Add classes to the image
+
+    [image-autorefresh src="image-url" class="your_custom_class"]
+    
 ## Examples
 
 The shortcode
@@ -59,3 +67,9 @@ Which will automatically refresh the live view from Troms&oslash; every 120 seco
 ## Multiple images
 
 The shortcode allows for multiple images on one page with different refresh rates.
+
+## Plans for new versions
+
+In version 1.3, I will add parameters to the shortcode to force reload even when the page doesn't have focus (not recommended). 
+A parameter to add classes to the div. A way to load images that already have query parameters in the address.
+

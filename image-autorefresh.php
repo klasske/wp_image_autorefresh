@@ -3,7 +3,7 @@
 Plugin Name: Image autorefresh shortcode
 Plugin URI: https://github.com/klasske/wp_image_autorefresh
 Description: Small shortcode plugin created specifically for reloading images for site.uit.no/spaceweather
-Version: 1.1
+Version: 1.2
 Author: Klaske van Vuurden
 Author URI: https://github.com/klasske/
 Copyright: Klaske van Vuurden
@@ -19,6 +19,9 @@ function image_autorefresh_shortcode($atts){
 			'refresh_time' => 60,
 			'caption' => '',
 			'align' => 'left',
+			'width' => 0,
+			'height' => 0,
+			'class' => ''	
 	), $atts );
 
    /* second version: allows multiple images per page with random string */
@@ -41,8 +44,15 @@ function image_autorefresh_shortcode($atts){
 
 	<div class="<?php echo '' != $a['caption'] ? 'wp-caption ': ''; ?>align<?php echo $a['align']; ?>">
 	<img src="<?php echo $a['src']; ?>" data-src="<?php echo $a['src']; ?>"
-	     class="image_autorefresh" id="image_autorefresh_<?php echo $randomString ?>"
-	     data-refresh="<?php echo $a['refresh_time']; ?>">
+	     class="image_autorefresh<?php 
+	     echo ($a['width'] > 0) ? ' image_autorefresh_changed_width' : ''; 
+	     echo ($a['class'] != '') ? ' ' . $a['class'] : ''; 
+	     ?>" 
+	     id="image_autorefresh_<?php echo $randomString ?>"
+	     data-refresh="<?php echo $a['refresh_time']; ?>"
+	     <?php echo ($a['width'] > 0) ? 'width="' . $a['width'] . '"' : '' ?>
+	     <?php echo ($a['height'] > 0) ? 'height="' . $a['height'] . '"' : '' ?>
+	     >
 	<?php echo '' != $a['caption'] ? '<p class="wp-caption-text">' . $a['caption'] . '</p>' : ''; ?>
 	</div>
 	<?php
@@ -56,5 +66,4 @@ function image_autorefresh_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'image_autorefresh_scripts' );
 add_shortcode('image-autorefresh', 'image_autorefresh_shortcode');
-
 
